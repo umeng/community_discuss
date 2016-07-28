@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/exploded-aar/umeng_community_demo_discuss/umeng_community_discuss_library_project/unspecified/jars/libs/com.umeng.message_v2.7.0.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="d5cf1006eecf63d91e7bd50b483c73d00ccf6fd0">
+        <dex dex="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/pre-dexed/debug/com.umeng.message_v2.7.0_3d2e26bdd758f8c6b94090f2a446c5a0d2b1e9f4.jar" />
+    </item>
+    <item
+        jar="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/exploded-aar/umeng_community_demo_discuss/umeng_community_discuss_library_project/unspecified/jars/libs/okio-0.6.1.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="e0c43a45d899d4512aacaf2d39f2ca13bcac1053">
+        <dex dex="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/pre-dexed/debug/okio-0.6.1_9099ce009499ce514d5945214b7832e90b624dde.jar" />
+    </item>
+    <item
+        jar="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/exploded-aar/umeng_community_demo_discuss/umeng_community_discuss_library_project/unspecified/jars/libs/weiboSDKCore_3.1.4.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="07b44558848c4134e2c64728af208d658d13a477">
+        <dex dex="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/pre-dexed/debug/weiboSDKCore_3.1.4_b1969d2ec7a135c52d90e7152ef7f9e2dcd8502e.jar" />
+    </item>
+    <item
+        jar="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/exploded-aar/umeng_community_demo_discuss/umeng_community_discuss_library_project/unspecified/jars/libs/org.apache.http.legacy.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="c12600a7dcdab4842b7887a59697241ae0c152cd">
+        <dex dex="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/pre-dexed/debug/org.apache.http.legacy_22bc627e401346f4629887ae509cd7b26ab10dce.jar" />
+    </item>
+    <item
+        jar="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/exploded-aar/umeng_community_demo_discuss/umeng_community_discuss_library_project/unspecified/jars/libs/umeng_community_sdk_login.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="98005eea056ce0905d811dfaff72a2903ce3b0db">
+        <dex dex="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/pre-dexed/debug/umeng_community_sdk_login_09e7aeb5a3960c97e595e95ef4cbb9229192bb02.jar" />
+    </item>
+    <item
+        jar="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/exploded-aar/umeng_community_demo_discuss/umeng_community_discuss_library_project/unspecified/jars/libs/SocialSDK_QQZone_3.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="7869ffcc417bebd4e30ae00807fbb4b5cdc9e55a">
+        <dex dex="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/pre-dexed/debug/SocialSDK_QQZone_3_d469a74bc6b1b3c9f36caa8aa897f236ff8b2323.jar" />
+    </item>
+    <item
+        jar="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/exploded-aar/umeng_community_demo_discuss/umeng_community_discuss_library_project/unspecified/jars/libs/universal-image-loader-1.9.4.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="112c344ef2e598f075aced49c00f55d9c16e0996">
+        <dex dex="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.4_2ec7979c9cfe92f7b2ff9ea95761675543319b4a.jar" />
+    </item>
+    <item
+        jar="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/exploded-aar/umeng_community_demo_discuss/umeng_community_discuss_library_project/unspecified/jars/libs/httpmime-4.1.3.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="8d76063f75b64e45ca7e10d29658b6b5e5e67bca">
+        <dex dex="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/pre-dexed/debug/httpmime-4.1.3_dfec082bb843179c2133f1339ab7521c2c73dee3.jar" />
+    </item>
+    <item
+        jar="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="227ee9addf498bb72e0191f92e2726c56060ff2b">
+        <dex dex="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/pre-dexed/debug/instant-run_60e903aabd6da730d5a681b4fb76af30cdc2ba54.jar" />
+    </item>
+    <item
+        jar="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/exploded-aar/umeng_community_demo_discuss/umeng_community_discuss_library_project/unspecified/jars/libs/SocialSDK_Sina.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="f836d4788ba2fd788d12d10f455bd871e009934a">
+        <dex dex="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/pre-dexed/debug/SocialSDK_Sina_2bf34def125aeadf98b55261efd48acd2330526d.jar" />
+    </item>
+    <item
+        jar="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/exploded-aar/umeng_community_demo_discuss/umeng_community_discuss_library_project/unspecified/jars/libs/umeng_community_sdk_core.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="9a466d46a630980b4dacdfea4754ee966a130c10">
+        <dex dex="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/pre-dexed/debug/umeng_community_sdk_core_33920aa81880962a0ee91a5f946db401b7490145.jar" />
+    </item>
+    <item
+        jar="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/exploded-aar/umeng_community_demo_discuss/umeng_community_discuss_library_project/unspecified/jars/libs/mta-sdk-1.6.2.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="c7b8727d6394d45c725e892d4f2dfd1bf240a90a">
+        <dex dex="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/pre-dexed/debug/mta-sdk-1.6.2_897ae7f684cf752314c434943281202f74936b49.jar" />
+    </item>
+    <item
+        jar="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/exploded-aar/umeng_community_demo_discuss/umeng_community_discuss_library_project/unspecified/jars/libs/android-support-v7-recyclerview.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="de350b7715404e2e696d2b194f1806dd520f2efd">
+        <dex dex="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/pre-dexed/debug/android-support-v7-recyclerview_1bf3f75a7d7fe293773a4b6eebb4459b298db31c.jar" />
+    </item>
+    <item
+        jar="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/exploded-aar/umeng_community_demo_discuss/umeng_community_discuss_library_project/unspecified/jars/libs/umeng_community_share.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="afce91f45561b4c61c49799082040c6eee6cd976">
+        <dex dex="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/pre-dexed/debug/umeng_community_share_ea66bd6a2d0a5eb413fcc92eef49a774a9cd7889.jar" />
+    </item>
+    <item
+        jar="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/exploded-aar/umeng_community_demo_discuss/umeng_community_discuss_library_project/unspecified/jars/libs/umeng_activeandroid.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="18c644d13c764043e1f8f0da2f90400588344579">
+        <dex dex="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/pre-dexed/debug/umeng_activeandroid_19fd4a87e63bf7aa8545bc1bec96b418ad84adb9.jar" />
+    </item>
+    <item
+        jar="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/exploded-aar/umeng_community_demo_discuss/umeng_community_discuss_library_project/unspecified/jars/libs/umeng_community_location.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="b70652d9b940ac7120aab5a12ae42d6e5b7f18f2">
+        <dex dex="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/pre-dexed/debug/umeng_community_location_f16244dd2a26886378209571099acf9131f30213.jar" />
+    </item>
+    <item
+        jar="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/exploded-aar/umeng_community_demo_discuss/umeng_community_discuss_library_project/unspecified/jars/libs/AMap_Location_V2.5.0_20160526.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="7f5fc9bf11cfc10e9b6730780e78ce1b72fb9058">
+        <dex dex="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/pre-dexed/debug/AMap_Location_V2.5.0_20160526_f8788df12aefb928be170c6ec5f8950ed20b3367.jar" />
+    </item>
+    <item
+        jar="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/exploded-aar/umeng_community_demo_discuss/umeng_community_discuss_library_project/unspecified/jars/libs/android-support-v4.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="d0bcdaef794ed8a82c859872b1d18a86f3b64b4f">
+        <dex dex="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/pre-dexed/debug/android-support-v4_ef6a7ec5cc2a647925e9b9024a6627e5ac962bc1.jar" />
+    </item>
+    <item
+        jar="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/exploded-aar/umeng_community_demo_discuss/umeng_community_discuss_library_project/unspecified/jars/libs/net_core.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="a68a175ead91709de561491e0713ffbccd98b000">
+        <dex dex="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/pre-dexed/debug/net_core_358341ae63e2ee91983e5074bf7cb4e8131108ff.jar" />
+    </item>
+    <item
+        jar="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="8af7331cae19f1814409fdb53cc4e164fe2f8292">
+        <dex dex="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_86cb2f86eba182c6342e0eedf9fdcbdd160daa29.jar" />
+    </item>
+    <item
+        jar="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/exploded-aar/umeng_community_demo_discuss/umeng_community_discuss_library_project/unspecified/jars/libs/SocialSDK_WeiXin_2.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="a8ea862d557fb9c7d4037afd0394b6cf784da40c">
+        <dex dex="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/pre-dexed/debug/SocialSDK_WeiXin_2_e00a9a715fbda3476ecf422260593509874bb98d.jar" />
+    </item>
+    <item
+        jar="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/exploded-aar/umeng_community_demo_discuss/umeng_community_discuss_library_project/unspecified/jars/libs/open_sdk_r5509.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="5e122fe72a9cd3a63247f9fd1046070defe71ec5">
+        <dex dex="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/pre-dexed/debug/open_sdk_r5509_e76c2c2c45beb26366434dfbf9070449beeb033d.jar" />
+    </item>
+    <item
+        jar="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/exploded-aar/umeng_community_demo_discuss/umeng_community_discuss_library_project/unspecified/jars/libs/umeng_social_sdk.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="85430c195487925d995b96f1e3d351980aa707ef">
+        <dex dex="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/pre-dexed/debug/umeng_social_sdk_5002597ccf8268e7e78bba0fb5d729cf2775c773.jar" />
+    </item>
+    <item
+        jar="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/exploded-aar/umeng_community_demo_discuss/umeng_community_discuss_library_project/unspecified/jars/libs/umeng_community_push.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="47a8b41a75fb482d7bca4db48d959ffc9ab39ae9">
+        <dex dex="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/pre-dexed/debug/umeng_community_push_f76140617001d46797905b5cf62a7359d668db49.jar" />
+    </item>
+    <item
+        jar="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/exploded-aar/umeng_community_demo_discuss/umeng_community_discuss_library_project/unspecified/jars/libs/wire-runtime-1.7.0.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="ccf7d2033b8c38fc79aa47b734b7f942bf286850">
+        <dex dex="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/pre-dexed/debug/wire-runtime-1.7.0_44d9458a48197eba31a475f869be73f00929bcbb.jar" />
+    </item>
+    <item
+        jar="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/exploded-aar/umeng_community_demo_discuss/umeng_community_discuss_library_project/unspecified/jars/libs/SocialSDK_WeiXin_1.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="cad21f68582e5bd614ece379f96a4ce9fb41e92d">
+        <dex dex="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/intermediates/pre-dexed/debug/SocialSDK_WeiXin_1_c91a05b2e6b9de60c6a4b7a234b1a4fec3f2ebb6.jar" />
+    </item>
+
+</items>

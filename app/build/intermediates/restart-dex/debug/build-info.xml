@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="x86,armeabi-v7a"
+    api-level="19"
+    density="xhdpi"
+    format="7"
+    timestamp="28798610846714"
+    token="-4778229720029968329" >
+
+    <task
+        name="javac"
+        duration="3210" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="3617" />
+    <task
+        name="verifier"
+        duration="635" />
+
+    <artifact
+        location="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
+
+    <build timestamp="28798610846714" >
+        <artifact
+            location="/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/app/build/outputs/apk/app-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>
