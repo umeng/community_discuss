@@ -24,7 +24,6 @@
 
 package com.umeng.commm.ui.activities;
 
-import android.annotation.TargetApi;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -398,7 +397,7 @@ public class PostFeedActivity extends BaseFragmentActivity implements OnClickLis
     }
 
     /**
-     * 为话题提示VIew绑定动画</br>
+     * 为话题提示VIew绑定动画
      */
     private void startAnimationForTopicTipView() {
         int timePiece = 500;
@@ -423,9 +422,9 @@ public class PostFeedActivity extends BaseFragmentActivity implements OnClickLis
     }
 
     /**
-     * 启动淡出动画</br>
+     * 启动淡出动画
      */
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+
     private void startFadeOutAnimForTopicTipView() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             if (mTopicTipView.getAlpha() < 0.1f) {
@@ -440,7 +439,7 @@ public class PostFeedActivity extends BaseFragmentActivity implements OnClickLis
     }
 
     /**
-     * 位置是否已经初始化</br>
+     * 位置是否已经初始化
      *
      * @return
      */
@@ -479,7 +478,7 @@ public class PostFeedActivity extends BaseFragmentActivity implements OnClickLis
     }
 
     /**
-     * 初始化EditView并设置回调</br>
+     * 初始化EditView并设置回调
      */
     private void initEditView() {
 
@@ -598,7 +597,7 @@ public class PostFeedActivity extends BaseFragmentActivity implements OnClickLis
     }
 
     /**
-     * 从TextView获取位置text。该值是在获取地理位置信息时设置。</br>
+     * 从TextView获取位置text。该值是在获取地理位置信息时设置。
      *
      * @return
      */
@@ -619,7 +618,7 @@ public class PostFeedActivity extends BaseFragmentActivity implements OnClickLis
     }
 
     /**
-     * 准备feed数据</br>
+     * 准备feed数据
      */
     protected FeedItem prepareFeed() {
         FeedItem mNewFeed = new FeedItem();
@@ -651,7 +650,7 @@ public class PostFeedActivity extends BaseFragmentActivity implements OnClickLis
     }
 
     /**
-     * 清除状态</br>
+     * 清除状态
      */
     @Override
     public void clearState() {
@@ -729,7 +728,7 @@ public class PostFeedActivity extends BaseFragmentActivity implements OnClickLis
     }
 
     /**
-     * 用户点击back按钮。</br>
+     * 用户点击back按钮。
      */
     private void dealBackLogic() {
         //mFragmentLatout.setVisibility(View.GONE);
@@ -824,7 +823,7 @@ public class PostFeedActivity extends BaseFragmentActivity implements OnClickLis
     }
 
     /**
-     * 设置PhotoButton跟TopicButton的选中状态</br>
+     * 设置PhotoButton跟TopicButton的选中状态
      *
      * @param photoSelected
      * @param topicSelected
@@ -835,7 +834,7 @@ public class PostFeedActivity extends BaseFragmentActivity implements OnClickLis
     }
 
     /**
-     * 显示选择话题的Fragment</br>
+     * 显示选择话题的Fragment
      */
     private void showTopicFragment() {
         //mFragmentLatout.setVisibility(View.VISIBLE);
@@ -971,7 +970,7 @@ public class PostFeedActivity extends BaseFragmentActivity implements OnClickLis
     private SelectTopicDialog mSelectTopicDlg;
 
     /**
-     * 显示选择话题的Dialog</br>
+     * 显示选择话题的Dialog
      */
     private void showTopicPickerDlg() {
 
@@ -1040,7 +1039,7 @@ public class PostFeedActivity extends BaseFragmentActivity implements OnClickLis
 
 
     /**
-     * 显示选择地理位置的Dialog</br>
+     * 显示选择地理位置的Dialog
      */
     private void showLocPickerDlg() {
 
@@ -1077,7 +1076,7 @@ public class PostFeedActivity extends BaseFragmentActivity implements OnClickLis
     }
 
     /**
-     * 显示@好友列表的Dialog</br>
+     * 显示@好友列表的Dialog
      */
     private void showAtFriendsDialog() {
 
@@ -1122,7 +1121,7 @@ public class PostFeedActivity extends BaseFragmentActivity implements OnClickLis
     }
 
     /**
-     * 移除字符</br>
+     * 移除字符
      *
      * @param c
      */

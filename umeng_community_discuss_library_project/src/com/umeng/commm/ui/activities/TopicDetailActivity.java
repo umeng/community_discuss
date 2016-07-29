@@ -64,7 +64,7 @@ public class TopicDetailActivity extends TopicDetailBaseActivity {
     }
 
     /**
-     * 跳转至发送新鲜事页面</br>
+     * 跳转至发送新鲜事页面
      */
     protected void gotoPostFeedActivity() {
         Intent postIntent = new Intent(TopicDetailActivity.this, PostFeedActivity.class);
@@ -72,7 +72,7 @@ public class TopicDetailActivity extends TopicDetailBaseActivity {
         startActivity(postIntent);
     }
     /**
-     * 获取对应的Fragment。0：话题聚合 1：活跃用户</br>
+     * 获取对应的Fragment。0：话题聚合 1：活跃用户
      * 
      * @param pos
      * @return

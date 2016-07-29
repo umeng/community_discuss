@@ -76,7 +76,7 @@ public class ImagePickerGvAdapter extends CommonAdapter<String, ImagePickerGvVie
     }
 
     /**
-     * 获取所有选中的图片地址</br>
+     * 获取所有选中的图片地址
      * 
      * @return 所有选择图片的地址
      */

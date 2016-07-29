@@ -64,7 +64,7 @@ public class FeedImageAdapter extends CommonAdapter<ImageItem, NullViewParser> {
     }
 
     /**
-     * 初始化显示的图片跟配置</br>
+     * 初始化显示的图片跟配
      */
     private void initDisplayOption() {
         mDisplayOption.mLoadingResId = ResFinder.getResourceId(ResType.DRAWABLE,

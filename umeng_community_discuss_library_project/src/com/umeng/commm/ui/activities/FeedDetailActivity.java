@@ -24,7 +24,7 @@
 
 package com.umeng.commm.ui.activities;
 
-import android.annotation.SuppressLint;
+
 import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
@@ -189,7 +189,7 @@ public class FeedDetailActivity extends BaseFragmentActivity implements OnClickL
     }
 
     /**
-     * 初始化view</br>
+     * 初始化view
      */
     private void initViews() {
         initTitleLayout();
@@ -200,7 +200,7 @@ public class FeedDetailActivity extends BaseFragmentActivity implements OnClickL
         findViewById(ResFinder.getId("umeng_comm_feed_container")).setOnTouchListener(
                 new OnTouchListener() {
 
-                    @SuppressLint("ClickableViewAccessibility")
+
                     @Override
                     public boolean onTouch(View v, MotionEvent event) {
                         if (mCommentLayout != null) {
@@ -223,7 +223,7 @@ public class FeedDetailActivity extends BaseFragmentActivity implements OnClickL
     }
 
     /**
-     * 检测该条feed是否有效。由于在Response中构造了一个默认的Feed，此时需要验证其有效性。</br>
+     * 检测该条feed是否有效。由于在Response中构造了一个默认的Feed，此时需要验证其有效性。
      *
      * @param feedItem
      * @return
@@ -234,7 +234,7 @@ public class FeedDetailActivity extends BaseFragmentActivity implements OnClickL
     }
 
     /**
-     * 初始化feed detail fragment</br>
+     * 初始化feed detail fragment
      *
      * @param feedItem
      */
@@ -390,7 +390,7 @@ public class FeedDetailActivity extends BaseFragmentActivity implements OnClickL
 
 
     @SuppressWarnings("deprecation")
-    @SuppressLint("NewApi")
+
     private void copyToClipboard() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
             ClipData data = ClipData.newPlainText("feed_text", mFeedItem.text);
@@ -405,7 +405,7 @@ public class FeedDetailActivity extends BaseFragmentActivity implements OnClickL
     }
 
     /**
-     * 是否可删除该feed。可删除的条件是自己的feed、管理员有删除内容的权限</br>
+     * 是否可删除该feed。可删除的条件是自己的feed、管理员有删除内容的权限
      *
      * @return
      */

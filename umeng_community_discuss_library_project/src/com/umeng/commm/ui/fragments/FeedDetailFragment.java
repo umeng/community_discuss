@@ -436,7 +436,7 @@ public class FeedDetailFragment extends CommentEditFragment<List<FeedItem>, Feed
     }
 
     /**
-     * 获取显示在EditText中显示的评论文本。不如：回复XXX</br>
+     * 获取显示在EditText中显示的评论文本。不如：回复XXX
      *
      * @return hint
      */

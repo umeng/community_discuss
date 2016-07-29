@@ -72,7 +72,7 @@ public class ImageSelectedAdapter extends CommonAdapter<String, ImageSelectedVie
     }
 
     /**
-     * 显示删除某项的Dialog </br>
+     * 显示删除某项的Dialog
      * 
      * @param position
      */

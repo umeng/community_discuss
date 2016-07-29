@@ -101,14 +101,14 @@ public class RecommendUserFragment extends ActiveUserFragment implements OnClick
     }
 
     /**
-     * 设置跳过按钮不可见。在设置页面显示推荐用户的时候不需要显示。</br>
+     * 设置跳过按钮不可见。在设置页面显示推荐用户的时候不需要显示
      */
     public void setSaveButtonInvisiable() {
         mSaveButtonVisiable = false;
     }
 
     /**
-     * 设置点击跳过时得回调</br>
+     * 设置点击跳过时得回调
      *
      * @param listener
      */

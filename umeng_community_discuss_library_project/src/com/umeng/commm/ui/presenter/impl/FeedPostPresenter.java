@@ -160,7 +160,7 @@ public class FeedPostPresenter extends BasePresenter {
     }
 
     /**
-     * 执行整整的发送请求</br>
+     * 执行整整的发送请求
      */
     private void executeRealPostFeed(FeedItem feedItem, boolean isbulletin) {
         executePostFeed(feedItem, isbulletin);
@@ -171,7 +171,7 @@ public class FeedPostPresenter extends BasePresenter {
     }
 
     /**
-     * 发布新的feed</br>
+     * 发布新的feed
      */
     private void executePostFeed(final FeedItem feedItem, boolean isbulletin) {
         feedItem.type = isbulletin ? 1 : 0;
@@ -214,7 +214,7 @@ public class FeedPostPresenter extends BasePresenter {
     }
 
     /**
-     * 检查分享内容是否有效,在论坛版本下不使用此方法</br>
+     * 检查分享内容是否有效,在论坛版本下不使用此方法
      * 
      * @return
      */
@@ -246,7 +246,7 @@ public class FeedPostPresenter extends BasePresenter {
     }
 
     /**
-     * 获取地理位置详细信息</br>
+     * 获取地理位置详细信息
      */
     private void getLocationDetailAddr() {
         mCommunitySDK.getLocationAddr(mLocation,

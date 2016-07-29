@@ -97,7 +97,7 @@ public class FindActivity extends FindBaseActivity implements OnClickListener {
 
 
     /**
-     * 跳转到用户中心Activity</br>
+     * 跳转到用户中心Activity
      */
     protected void gotoUserInfoActivity() {
         Intent intent = new Intent(FindActivity.this, UserInfoActivity.class);
@@ -112,7 +112,7 @@ public class FindActivity extends FindBaseActivity implements OnClickListener {
     }
 
     /**
-     * 显示附件推荐Feed</br>
+     * 显示附件推荐Feed
      */
     protected void showNearbyFeed() {
         if (mNearbyFeedFragment == null) {
@@ -130,7 +130,7 @@ public class FindActivity extends FindBaseActivity implements OnClickListener {
     }
 
     /**
-     * 显示实时内容的Fragment</br>
+     * 显示实时内容的Fragment
      */
     protected void showRealTimeFeed() {
         if (mRealTimeFeedFragment == null) {
@@ -148,7 +148,7 @@ public class FindActivity extends FindBaseActivity implements OnClickListener {
     }
 
     /**
-     * 显示收藏Feed</br>
+     * 显示收藏Feed
      */
     protected void showFavoritesFeed() {
         if (mFavoritesFragment == null) {
@@ -166,7 +166,7 @@ public class FindActivity extends FindBaseActivity implements OnClickListener {
     }
 
     /**
-     * 显示推荐话题的Dialog</br>
+     * 显示推荐话题的Dialog
      */
     protected void showRecommendTopic() {
         if (mRecommendTopicFragment == null) {
@@ -185,7 +185,7 @@ public class FindActivity extends FindBaseActivity implements OnClickListener {
     }
 
     /**
-     * 隐藏发现页面，显示fragment</br>
+     * 隐藏发现页面，显示fragment
      *
      * @param fragment
      */
@@ -198,7 +198,7 @@ public class FindActivity extends FindBaseActivity implements OnClickListener {
     }
 
     /**
-     * 隐藏fragment，显示发现页面</br>
+     * 隐藏fragment，显示发现页面
      */
     protected void showFindPage() {
         super.showFindPage();
@@ -208,7 +208,7 @@ public class FindActivity extends FindBaseActivity implements OnClickListener {
     }
 
     /**
-     * 显示朋友圈Fragment</br>
+     * 显示朋友圈Fragment
      */
     protected void showFriendsFragment() {
         if (mFriendsFragment == null) {
@@ -226,7 +226,7 @@ public class FindActivity extends FindBaseActivity implements OnClickListener {
     }
 
     /**
-     * 显示推荐用户fragment</br>
+     * 显示推荐用户fragment
      */
     protected void showRecommendUserFragment() {
         if (mRecommendUserFragment == null) {

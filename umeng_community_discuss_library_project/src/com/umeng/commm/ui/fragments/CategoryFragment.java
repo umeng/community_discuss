@@ -75,7 +75,7 @@ public class CategoryFragment extends BaseFragment<List<Category>, CategoryPrese
                 Context.INPUT_METHOD_SERVICE);
     }
     /**
-     * 初始化搜索话题View跟事件处理</br>
+     * 初始化搜索话题View跟事件处理
      *
      * @param rootView
      */
@@ -147,7 +147,7 @@ public class CategoryFragment extends BaseFragment<List<Category>, CategoryPrese
     }
 
     /**
-     * 初始化刷新相关的view跟事件</br>
+     * 初始化刷新相关的view跟事件
      *
      * @param rootView
      */

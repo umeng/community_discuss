@@ -456,7 +456,7 @@ public class CommentMessageViewHolder extends FeedItemViewHolder implements MvpL
     }
 
     /**
-     * 判断该feed是否被删除，本地[目前暂时按照从方法判断]</br>
+     * 判断该feed是否被删除，本地[目前暂时按照从方法判断]
      * 
      * @param item
      * @return
@@ -507,7 +507,7 @@ public class CommentMessageViewHolder extends FeedItemViewHolder implements MvpL
     }
 
     /**
-     * 设置feedItem的基本信息（头像，昵称，内容、位置）</br>
+     * 设置feedItem的基本信息（头像，昵称，内容、位置）
      *
      */
     protected void setBaseFeeditemInfo() {
@@ -568,7 +568,7 @@ public class CommentMessageViewHolder extends FeedItemViewHolder implements MvpL
     }
 
     /**
-     * 设置feed 类型的icon</br>
+     * 设置feed 类型的icon
      *
      */
     private void setTypeIcon1() {

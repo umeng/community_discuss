@@ -189,7 +189,7 @@ public class SearchFragment extends FeedListFragment<SearchPresenter> implements
     }
 
     /**
-     * </br>
+     *
      *
      * @param users
      */
@@ -245,7 +245,7 @@ public class SearchFragment extends FeedListFragment<SearchPresenter> implements
     }
 
     /**
-     * éšè—è¾“å…¥æ³•</br>
+     *
      */
     @Override
     public void hideInputMethod() {
@@ -257,7 +257,7 @@ public class SearchFragment extends FeedListFragment<SearchPresenter> implements
     }
 
     /**
-     * æ˜¾ç¤ºè¾“å…¥æ³•</br>
+     *
      */
     private void showInputMethod() {
         if (getActivity() instanceof SearchActivity) {

@@ -44,12 +44,12 @@
         "source": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/huatizu.png"
     },
     {
-        "merged": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/kuangc.png",
-        "source": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/kuangc.png"
-    },
-    {
         "merged": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/umeng_comm_emoji_keyboard.png",
         "source": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/umeng_comm_emoji_keyboard.png"
+    },
+    {
+        "merged": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/kuangc.png",
+        "source": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/kuangc.png"
     },
     {
         "merged": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/duihuakuang2.9.png",

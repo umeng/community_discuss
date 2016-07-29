@@ -236,7 +236,7 @@ public class CategoryPresenter extends BaseFragmentPresenter<List<Category>> {
     }
 
     /**
-     * 关注某个话题</br>
+     * 关注某个话题
      *
      * @param topic 话题的id
      */

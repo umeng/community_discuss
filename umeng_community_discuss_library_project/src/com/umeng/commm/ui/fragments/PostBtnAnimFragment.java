@@ -67,7 +67,7 @@ public abstract class PostBtnAnimFragment<P extends FeedListPresenter> extends F
     }
 
     /**
-     * 检查是否为Float button执行动画</br>
+     * 检查是否为Float button执行动画
      *
      * @param event
      */
@@ -99,7 +99,7 @@ public abstract class PostBtnAnimFragment<P extends FeedListPresenter> extends F
     }
 
     /**
-     * 为Float button执行动画</br>
+     * 为Float button执行动画
      *
      * @param show 显示 or 隐藏
      */

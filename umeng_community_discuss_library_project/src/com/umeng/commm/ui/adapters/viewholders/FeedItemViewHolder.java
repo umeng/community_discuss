@@ -237,7 +237,7 @@ public class FeedItemViewHolder extends ViewHolder implements MvpLikeView {
     }
 
     /**
-     * 设置feedItem的基本信息（头像，昵称，内容、位置）</br>
+     * 设置feedItem的基本信息（头像，昵称，内容、位置）
      */
     protected void setBaseFeeditemInfo() {
         // 设置feed类型图标
@@ -308,7 +308,7 @@ public class FeedItemViewHolder extends ViewHolder implements MvpLikeView {
     }
 
     /**
-     * 设置feed 类型的icon</br>
+     * 设置feed 类型的icon
      */
     protected boolean setTypeIcon() {
         Drawable drawable;

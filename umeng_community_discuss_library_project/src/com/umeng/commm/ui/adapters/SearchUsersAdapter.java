@@ -88,7 +88,7 @@ public class SearchUsersAdapter extends BaseRecyclerAdapter<CommUser, SearchUser
     }
 
     /**
-     * 根据项数计算每项的宽度</br>
+     * 根据项数计算每项的宽度
      * 
      * @return
      */

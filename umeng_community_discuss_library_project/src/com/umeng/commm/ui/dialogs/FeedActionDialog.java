@@ -222,7 +222,7 @@ public class FeedActionDialog extends ActionDialog {
     }
 
     /**
-     * 是否可删除该feed。可删除的条件是自己的feed、管理员有删除内容的权限</br>
+     * 是否可删除该feed。可删除的条件是自己的feed、管理员有删除内容的权限
      * 
      * @return
      */

@@ -54,7 +54,7 @@ public class FeedContentPresenter extends BaseFeedPresenter {
     }
 
     /**
-     * 跳转到转发页面</br>
+     * 跳转到转发页面
      */
     private void gotoFeedDetailActivity(FeedItem feedItem) {
         Intent intent = new Intent(mContext, FeedDetailActivity.class);
@@ -111,7 +111,7 @@ public class FeedContentPresenter extends BaseFeedPresenter {
     }
 
     /**
-     * 跳转到个人中心。</br>
+     * 跳转到个人中心。
      * 
      * @param user
      */

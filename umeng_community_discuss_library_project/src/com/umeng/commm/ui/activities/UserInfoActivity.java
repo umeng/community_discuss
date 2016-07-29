@@ -169,7 +169,7 @@ public final class UserInfoActivity extends UserInfoBaseActivity {
 
 
     /**
-     * 修改文本颜色 </br>
+     * 修改文本颜色
      */
     protected void changeSelectedText() {
         if ((mCurrentFragment instanceof PostedFeedsFragment)) {

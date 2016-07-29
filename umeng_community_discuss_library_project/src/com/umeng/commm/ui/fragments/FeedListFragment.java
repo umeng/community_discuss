@@ -74,7 +74,7 @@ public abstract class FeedListFragment<P extends FeedListPresenter> extends Feed
     }
 
     /**
-     * 加载更多数据</br>
+     * 加载更多数据
      */
     protected void loadMoreFeed() {
         // 没有网络的情况下从数据库加载
@@ -166,7 +166,7 @@ public abstract class FeedListFragment<P extends FeedListPresenter> extends Feed
     }
 
     /**
-     * 跳转至发送新鲜事页面</br>
+     * 跳转至发送新鲜事页面
      */
     @Override
     public void gotoPostFeedActivity() {

@@ -111,7 +111,7 @@ public class AllFeedsFragment extends PostBtnAnimFragment<FeedListPresenter> {
     };
 
     /**
-     * 显示[更新N条新feed]】的View</br>
+     * 显示[更新N条新feed]】的View
      */
     private void showNewFeedTips() {
         mTipView.setVisibility(View.VISIBLE);
@@ -139,7 +139,7 @@ public class AllFeedsFragment extends PostBtnAnimFragment<FeedListPresenter> {
     }
 
     /**
-     * 隐藏[更新N条feed]的View。注意：该方法必须由{@link #showNewFeedTips}的AnimationListener回调中被调用</br>
+     * 隐藏[更新N条feed]的View。注意：该方法必须由{@link #showNewFeedTips}的AnimationListener回调中被调用
      */
     private void dismissNewFeedTips() {
         Animation animation = new AlphaAnimation(1, 0);

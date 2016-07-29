@@ -153,7 +153,7 @@ public class CommunityMainFragment extends BaseFragment<Void, NullPresenter> imp
     }
 
     /**
-     * 初始化title</br>
+     * 初始化title
      *
      * @param rootView
      */
@@ -310,7 +310,7 @@ public class CommunityMainFragment extends BaseFragment<Void, NullPresenter> imp
     }
 
     /**
-     * 跳转到发现Activity</br>
+     * 跳转到发现Activity
      *
      * @param user
      */
@@ -351,7 +351,7 @@ public class CommunityMainFragment extends BaseFragment<Void, NullPresenter> imp
     }
 
     /**
-     * 初始化ViewPager VIew</br>
+     * 初始化ViewPager VIew
      *
      * @param rootView
      */
@@ -418,7 +418,7 @@ public class CommunityMainFragment extends BaseFragment<Void, NullPresenter> imp
     }
 
     /**
-     * 初始化Fragment</br>
+     * 初始化Fragment
      */
     private void initFragment() {
 //        mMainFeedFragment = new AllFeedsFragment();
@@ -445,7 +445,7 @@ public class CommunityMainFragment extends BaseFragment<Void, NullPresenter> imp
     }
 
     /**
-     * 获取当前页面被选中的Fragment</br>
+     * 获取当前页面被选中的Fragment
      *
      * @return
      */
@@ -454,7 +454,7 @@ public class CommunityMainFragment extends BaseFragment<Void, NullPresenter> imp
     }
 
     /**
-     * </br>
+     *
      *
      * @param pos
      * @return
@@ -486,7 +486,7 @@ public class CommunityMainFragment extends BaseFragment<Void, NullPresenter> imp
     }
 
     /**
-     * 隐藏MianFeedFragment的输入法，当退出fragment or activity的时候</br>
+     * 隐藏MianFeedFragment的输入法，当退出fragment or activity的时候
      */
     public void hideCommentLayoutAndInputMethod() {
 //        if (mMainFeedFragment != null) {
@@ -501,7 +501,7 @@ public class CommunityMainFragment extends BaseFragment<Void, NullPresenter> imp
     }
 
     /**
-     * clean sub fragment data</br>
+     * clean sub fragment data
      */
     public void cleanAdapterData() {
 //        if (mMainFeedFragment != null) {
@@ -524,7 +524,7 @@ public class CommunityMainFragment extends BaseFragment<Void, NullPresenter> imp
     }
 
     /**
-     * 主动调用加载数据。 【注意】该接口仅仅在退出登录时，跳转到FeedsActivity清理数据后重新刷新数据</br>
+     * 主动调用加载数据。 【注意】该接口仅仅在退出登录时，跳转到FeedsActivity清理数据后重新刷新数据
      */
     public void repeatLoadDataFromServer() {
 //        if (mMainFeedFragment != null) {
@@ -539,7 +539,7 @@ public class CommunityMainFragment extends BaseFragment<Void, NullPresenter> imp
     }
 
     /**
-     * 注册登录成功时的广播</br>
+     * 注册登录成功时的广播
      */
     private void registerInitSuccessBroadcast() {
         IntentFilter filter = new IntentFilter();

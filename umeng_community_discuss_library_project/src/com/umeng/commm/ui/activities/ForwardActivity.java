@@ -98,7 +98,7 @@ public class ForwardActivity extends PostFeedActivity {
     }
 
     /**
-     * 解析被转发FeedItem中的第一张图片</br>
+     * 解析被转发FeedItem中的第一张图片
      * 
      * @param item 被转发的FeedItem
      */
@@ -225,7 +225,7 @@ public class ForwardActivity extends PostFeedActivity {
     /**
      * 获取转发Feed的id。
      * 
-     * @return 如果该被转发的feed为空，则返回空串; 如果被转发的feed是一条转发feed，则返回该转发feed的id；</br>
+     * @return 如果该被转发的feed为空，则返回空串; 如果被转发的feed是一条转发feed，则返回该转发feed的id；
      *         否则返回该转发的id
      */
     private String getForwardFeedId() {
@@ -237,7 +237,7 @@ public class ForwardActivity extends PostFeedActivity {
     }
 
     /**
-     * 根据内容创建一条转发的feed</br>
+     * 根据内容创建一条转发的feed
      * 
      * @return 一条转发的feed
      */
@@ -271,7 +271,7 @@ public class ForwardActivity extends PostFeedActivity {
     }
 
     /**
-     * 判断当前feed是否是一条转发</br>
+     * 判断当前feed是否是一条转发
      * 
      * @return
      */
@@ -280,7 +280,7 @@ public class ForwardActivity extends PostFeedActivity {
     }
 
     /**
-     * 更新View的显示内容</br>
+     * 更新View的显示内容
      */
     private void updateViewContent() {
         // 被转发的feed的第一张图片url

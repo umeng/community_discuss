@@ -112,7 +112,7 @@ public class TopicFragment extends TopicBaseFragment {
     }
 
     /**
-     * 初始化搜索话题View跟事件处理</br>
+     * 初始化搜索话题View跟事件处理
      *
      * @param rootView
      */

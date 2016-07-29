@@ -4,12 +4,12 @@
         "source": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/bundles/debug/res/layout/umeng_comm_more_dialog_layout.xml"
     },
     {
-        "merged": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/res/merged/androidTest/debug/layout/umeng_comm_community_frag_layout.xml",
-        "source": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/bundles/debug/res/layout/umeng_comm_community_frag_layout.xml"
-    },
-    {
         "merged": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/res/merged/androidTest/debug/layout/umeng_comm_imagepicker_view_photopreview.xml",
         "source": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/bundles/debug/res/layout/umeng_comm_imagepicker_view_photopreview.xml"
+    },
+    {
+        "merged": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/res/merged/androidTest/debug/layout/umeng_comm_community_frag_layout.xml",
+        "source": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/bundles/debug/res/layout/umeng_comm_community_frag_layout.xml"
     },
     {
         "merged": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/res/merged/androidTest/debug/layout/umeng_comm_empty_view.xml",
@@ -52,12 +52,12 @@
         "source": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/bundles/debug/res/layout/umeng_comm_my_adapter.xml"
     },
     {
-        "merged": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/res/merged/androidTest/debug/layout/umeng_comm_received_comment_layout.xml",
-        "source": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/bundles/debug/res/layout/umeng_comm_received_comment_layout.xml"
-    },
-    {
         "merged": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/res/merged/androidTest/debug/layout/umeng_comm_topic_recommend.xml",
         "source": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/bundles/debug/res/layout/umeng_comm_topic_recommend.xml"
+    },
+    {
+        "merged": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/res/merged/androidTest/debug/layout/umeng_comm_received_comment_layout.xml",
+        "source": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/bundles/debug/res/layout/umeng_comm_received_comment_layout.xml"
     },
     {
         "merged": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/res/merged/androidTest/debug/layout/umeng_comm_nearby_user_layout.xml",
@@ -76,12 +76,12 @@
         "source": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/bundles/debug/res/layout/umeng_comm_message_session_item.xml"
     },
     {
-        "merged": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/res/merged/androidTest/debug/layout/umeng_comm_comment_main_layout.xml",
-        "source": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/bundles/debug/res/layout/umeng_comm_comment_main_layout.xml"
-    },
-    {
         "merged": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/res/merged/androidTest/debug/layout/umeng_comm_waitdialog.xml",
         "source": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/bundles/debug/res/layout/umeng_comm_waitdialog.xml"
+    },
+    {
+        "merged": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/res/merged/androidTest/debug/layout/umeng_comm_comment_main_layout.xml",
+        "source": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/bundles/debug/res/layout/umeng_comm_comment_main_layout.xml"
     },
     {
         "merged": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/res/merged/androidTest/debug/layout/umeng_comm_received_comment_item.xml",
@@ -100,12 +100,12 @@
         "source": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/bundles/debug/res/layout/umeng_comm_topic_search.xml"
     },
     {
-        "merged": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/res/merged/androidTest/debug/layout/umeng_comm_followed_topic_layout.xml",
-        "source": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/bundles/debug/res/layout/umeng_comm_followed_topic_layout.xml"
-    },
-    {
         "merged": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/res/merged/androidTest/debug/layout/umeng_comm_search_activity.xml",
         "source": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/bundles/debug/res/layout/umeng_comm_search_activity.xml"
+    },
+    {
+        "merged": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/res/merged/androidTest/debug/layout/umeng_comm_followed_topic_layout.xml",
+        "source": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/bundles/debug/res/layout/umeng_comm_followed_topic_layout.xml"
     },
     {
         "merged": "/Users/umeng/Documents/umenggit/umeng_community_demo_discuss/umeng_community_discuss_library_project/build/intermediates/res/merged/androidTest/debug/layout/umeng_simplify_login.xml",
