@@ -1,0 +1,36 @@
+<component name="libraryTable">
+  <library name="umeng_community_discuss_library_project-2.6.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.umeng.wsq/umeng_community_discuss_library_project/2.6.1/jars/libs/SocialSDK_WeiXin_1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.umeng.wsq/umeng_community_discuss_library_project/2.6.1/jars/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.umeng.wsq/umeng_community_discuss_library_project/2.6.1/jars/libs/umeng_community_location.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.umeng.wsq/umeng_community_discuss_library_project/2.6.1/jars/libs/wire-runtime-1.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.umeng.wsq/umeng_community_discuss_library_project/2.6.1/jars/libs/umeng_community_push.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.umeng.wsq/umeng_community_discuss_library_project/2.6.1/jars/libs/umeng_community_sdk_login.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.umeng.wsq/umeng_community_discuss_library_project/2.6.1/jars/libs/com.umeng.message_v2.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.umeng.wsq/umeng_community_discuss_library_project/2.6.1/jars/libs/AMap_Location_V2.5.0_20160526.jar!/" />
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.umeng.wsq/umeng_community_discuss_library_project/2.6.1/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.umeng.wsq/umeng_community_discuss_library_project/2.6.1/jars/libs/umeng_social_sdk.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.umeng.wsq/umeng_community_discuss_library_project/2.6.1/jars/libs/android-support-v4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.umeng.wsq/umeng_community_discuss_library_project/2.6.1/jars/libs/universal-image-loader-1.9.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.umeng.wsq/umeng_community_discuss_library_project/2.6.1/jars/libs/okio-0.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.umeng.wsq/umeng_community_discuss_library_project/2.6.1/jars/libs/SocialSDK_Sina.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.umeng.wsq/umeng_community_discuss_library_project/2.6.1/jars/libs/open_sdk_r5509.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.umeng.wsq/umeng_community_discuss_library_project/2.6.1/jars/libs/umeng_activeandroid.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.umeng.wsq/umeng_community_discuss_library_project/2.6.1/jars/libs/SocialSDK_QQZone_3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.umeng.wsq/umeng_community_discuss_library_project/2.6.1/jars/libs/mta-sdk-1.6.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.umeng.wsq/umeng_community_discuss_library_project/2.6.1/jars/libs/SocialSDK_WeiXin_2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.umeng.wsq/umeng_community_discuss_library_project/2.6.1/jars/libs/umeng_community_sdk_core.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.umeng.wsq/umeng_community_discuss_library_project/2.6.1/jars/libs/org.apache.http.legacy.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.umeng.wsq/umeng_community_discuss_library_project/2.6.1/jars/libs/net_core.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.umeng.wsq/umeng_community_discuss_library_project/2.6.1/jars/libs/httpmime-4.1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.umeng.wsq/umeng_community_discuss_library_project/2.6.1/jars/libs/android-support-v7-recyclerview.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.umeng.wsq/umeng_community_discuss_library_project/2.6.1/jars/libs/umeng_community_share.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.umeng.wsq/umeng_community_discuss_library_project/2.6.1/jars/libs/weiboSDKCore_3.1.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.umeng.wsq/umeng_community_discuss_library_project/2.6.1/f8b294d5b0664ef94154a3b01c3664b9720cc9c4/umeng_community_discuss_library_project-2.6.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
