@@ -19,8 +19,8 @@ android {
 }
 
 dependencies {
-  //  compile project(':umeng_community_discuss_library_project')
-    compile ('com.umeng.wsq:umeng_community_discuss_library_project:2.6.1')
+   compile project(':umeng_community_discuss_library_project')
+   // compile ('com.umeng.wsq:umeng_community_discuss_library_project:2.6.1')
 
    // compile files('libs/android-support-v4.jar')
 }
