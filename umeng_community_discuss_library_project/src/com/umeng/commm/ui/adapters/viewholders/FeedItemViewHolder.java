@@ -48,8 +48,8 @@ import com.umeng.comm.core.utils.ResFinder;
 import com.umeng.comm.core.utils.TimeUtils;
 import com.umeng.comm.core.utils.ToastMsg;
 import com.umeng.commm.ui.activities.FeedDetailActivity;
-import com.umeng.commm.ui.adapters.FeedImageAdapter;
 import com.umeng.commm.ui.presenter.impl.FeedContentPresenter;
+import com.umeng.common.ui.adapters.FeedImageAdapter;
 import com.umeng.common.ui.adapters.viewholders.ViewHolder;
 import com.umeng.common.ui.colortheme.ColorQueque;
 import com.umeng.common.ui.emoji.EmojiTextView;
@@ -57,7 +57,6 @@ import com.umeng.common.ui.mvpview.MvpLikeView;
 import com.umeng.common.ui.presenter.impl.LikePresenter;
 import com.umeng.common.ui.util.ViewFinder;
 import com.umeng.common.ui.widgets.WrapperGridView;
-import com.umeng.socialize.utils.ContextUtil;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -237,7 +236,7 @@ public class FeedItemViewHolder extends ViewHolder implements MvpLikeView {
     }
 
     /**
-     * 设置feedItem的基本信息（头像，昵称，内容、位置）
+     * 设置feedItem的基本信息（头像，昵称，内容、位置）</br>
      */
     protected void setBaseFeeditemInfo() {
         // 设置feed类型图标
@@ -308,7 +307,7 @@ public class FeedItemViewHolder extends ViewHolder implements MvpLikeView {
     }
 
     /**
-     * 设置feed 类型的icon
+     * 设置feed 类型的icon</br>
      */
     protected boolean setTypeIcon() {
         Drawable drawable;

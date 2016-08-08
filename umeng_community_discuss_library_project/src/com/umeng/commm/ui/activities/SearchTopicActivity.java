@@ -1,9 +1,10 @@
 package com.umeng.commm.ui.activities;
 
-import android.view.KeyEvent;
 
-import com.umeng.commm.ui.fragments.SearchTopicFragment;
+import com.umeng.commm.ui.adapters.viewholders.NavigationCommandImpl;
 import com.umeng.common.ui.activities.SearchTopicBaseActivity;
+
+import com.umeng.common.ui.fragments.SearchTopicFragment;
 
 /**
  * Created by wangfei on 15/12/8.
@@ -13,15 +14,9 @@ public class SearchTopicActivity extends SearchTopicBaseActivity<SearchTopicFrag
 
     @Override
     protected SearchTopicFragment createSearchTopicFragment() {
-        return new SearchTopicFragment();
+        SearchTopicFragment searchTopicFragment = new SearchTopicFragment();
+        searchTopicFragment.setNavigation(new NavigationCommandImpl(this));
+        return searchTopicFragment;
     }
-    @Override
-    public boolean onKeyUp(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_ENTER) {
 
-            ((SearchTopicFragment)mSearchFragment).executeSearch();
-            return true;
-        }
-        return super.onKeyUp(keyCode, event);
-    }
 }

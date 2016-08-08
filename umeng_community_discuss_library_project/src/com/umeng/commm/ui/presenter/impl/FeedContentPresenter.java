@@ -41,7 +41,7 @@ import com.umeng.common.ui.presenter.impl.BaseFeedPresenter;
 import java.util.List;
 
 /**
- * @author mrsimple
+ * @author wangfei
  */
 public class FeedContentPresenter extends BaseFeedPresenter {
     ImageBrowser mImageBrowser;
@@ -54,7 +54,7 @@ public class FeedContentPresenter extends BaseFeedPresenter {
     }
 
     /**
-     * 跳转到转发页面
+     * 跳转到转发页面</br>
      */
     private void gotoFeedDetailActivity(FeedItem feedItem) {
         Intent intent = new Intent(mContext, FeedDetailActivity.class);
@@ -111,7 +111,7 @@ public class FeedContentPresenter extends BaseFeedPresenter {
     }
 
     /**
-     * 跳转到个人中心。
+     * 跳转到个人中心。</br>
      * 
      * @param user
      */

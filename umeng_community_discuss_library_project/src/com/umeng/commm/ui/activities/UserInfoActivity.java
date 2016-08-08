@@ -32,12 +32,13 @@ import com.umeng.comm.core.beans.BaseBean;
 import com.umeng.comm.core.beans.CommUser;
 import com.umeng.comm.core.listener.Listeners.LoginOnViewClickListener;
 import com.umeng.comm.core.utils.ResFinder;
-import com.umeng.commm.ui.fragments.PostedFeedsFragment;
-import com.umeng.commm.ui.fragments.PostedFeedsFragment.OnDeleteListener;
+import com.umeng.commm.ui.adapters.viewholders.NavigationCommandImpl;
+
 import com.umeng.common.ui.activities.AlbumActivity;
 import com.umeng.common.ui.activities.UserInfoBaseActivity;
 import com.umeng.common.ui.fragments.FansFragment;
 import com.umeng.common.ui.fragments.FollowedUserFragment;
+import com.umeng.common.ui.fragments.PostedFeedsFragment;
 import com.umeng.common.ui.util.ViewFinder;
 
 
@@ -62,19 +63,20 @@ public final class UserInfoActivity extends UserInfoBaseActivity {
     private FansFragment mFansFragment;
 
 
-
-
-
     @Override
     public void initFragment() {
-
+        command = new NavigationCommandImpl(this);
         mPostedFragment = PostedFeedsFragment.newInstance();
+        mPostedFragment.setNavigation(command);
+        mPostedFragment.isShowSearchBar(false);
         mPostedFragment.setOnAnimationResultListener(mListener);
         // 视图查找器
         mViewFinder = new ViewFinder(getWindow().getDecorView());
 
         mPostedFragment.setCurrentUser(mUser);
-        mPostedFragment.setOnDeleteListener(new OnDeleteListener() {
+        mPostedFragment.setUserVisibleHint(true);
+        mPostedFragment.setOnDeleteListener(new PostedFeedsFragment.OnDeleteListener() {
+
 
             @Override
             public void onDelete(BaseBean item) {
@@ -106,21 +108,22 @@ public final class UserInfoActivity extends UserInfoBaseActivity {
                 }
             }
         });
-                mAlbumTextView.setOnClickListener(new OnClickListener() {
+        mAlbumTextView.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 jumpToActivityWithUid(AlbumActivity.class);
             }
         });
-                mTopicTextView.setOnClickListener(new OnClickListener() {
+        mTopicTextView.setOnClickListener(new OnClickListener() {
 
-                    @Override
-                    public void onClick(View v) {
-                        jumpToActivityWithUid(FollowedTopicActivity.class);
-                    }
-                });
+            @Override
+            public void onClick(View v) {
+                jumpToActivityWithUid(FollowedTopicActivity.class);
+            }
+        });
     }
+
     @Override
     public void onClick(View v) {
         int id = v.getId();
@@ -133,9 +136,12 @@ public final class UserInfoActivity extends UserInfoBaseActivity {
             moveTabCurosr(0);
         } else if (id == ResFinder.getId("umeng_comm_follow_user_layout")) {// 关注用户
             if (mFolloweredUserFragment == null) {
-                mFolloweredUserFragment = FollowedUserFragment.newInstance(mUser.id);
-                mFolloweredUserFragment.setOnAnimationResultListener(mListener);
-                mFolloweredUserFragment.setOnResultListener(mFollowListener);
+                mFolloweredUserFragment = FollowedUserFragment.newFollowedUserFragment(mUser.id);
+                mFolloweredUserFragment.setUserVisibleHint(true);
+                mFolloweredUserFragment.setOnAnimationListener(mListener);
+                mFolloweredUserFragment.setNavigation(command);
+
+//                mFolloweredUserFragment.setOnResultListener(mFollowListener);
             }
             if (mCurrentFragment instanceof FollowedUserFragment
                     && !(mCurrentFragment instanceof FansFragment)) {
@@ -146,9 +152,16 @@ public final class UserInfoActivity extends UserInfoBaseActivity {
             moveTabCurosr(1);
         } else if (id == ResFinder.getId("umeng_comm_my_fans_layout")) { // 我的粉丝
             if (mFansFragment == null) {
-                mFansFragment = FansFragment.newFansFragment(mUser.id);
-                mFansFragment.setOnAnimationResultListener(mListener);
-                mFansFragment.setOnResultListener(mFansListener);
+                mFansFragment = FansFragment.newFanFragment(mUser.id);
+
+
+                mFansFragment.setUserVisibleHint(true);
+                mFansFragment.setOnAnimationListener(mListener);
+                //mFansFragment.setOnAnimationResultListener(mListener);
+                mFansFragment.setNavigation(command);
+
+
+//                mFansFragment.setOnResultListener(mFansListener);
             }
             if (mCurrentFragment instanceof FansFragment) {
                 mFansFragment.executeScrollTop();
@@ -156,20 +169,15 @@ public final class UserInfoActivity extends UserInfoBaseActivity {
                 showFragment(mFansFragment);
             }
             moveTabCurosr(2);
-        } else if (id == ResFinder.getId("umeng_comm_title_back_btn")) { // 返回
+        } else if (id == ResFinder.getId("umeng_comm_setting_back")) { // 返回
             this.finish();
         }
         changeSelectedText();
     }
 
 
-
-
-
-
-
     /**
-     * 修改文本颜色
+     * 修改文本颜色 </br>
      */
     protected void changeSelectedText() {
         if ((mCurrentFragment instanceof PostedFeedsFragment)) {
@@ -183,12 +191,8 @@ public final class UserInfoActivity extends UserInfoBaseActivity {
     }
 
 
-
-
-
-
     @Override
-    protected void ReceiverComplete(CommUser user ,boolean follow) {
+    protected void ReceiverComplete(CommUser user, boolean follow) {
         if (mFolloweredUserFragment != null) {
             mFolloweredUserFragment.updateFollowedState(user.id, follow);
         }

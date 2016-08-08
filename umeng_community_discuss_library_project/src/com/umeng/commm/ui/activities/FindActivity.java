@@ -24,49 +24,36 @@
 
 package com.umeng.commm.ui.activities;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.view.View;
 import android.view.View.OnClickListener;
 
 import com.umeng.comm.core.beans.CommConfig;
-import com.umeng.comm.core.beans.MessageCount;
 import com.umeng.comm.core.constants.Constants;
-import com.umeng.comm.core.listeners.Listeners.OnResultListener;
-import com.umeng.comm.core.utils.ResFinder;
-import com.umeng.commm.ui.fragments.FavoritesFragment;
-import com.umeng.commm.ui.fragments.FriendsFragment;
-import com.umeng.commm.ui.fragments.NearbyFeedFragment;
-import com.umeng.commm.ui.fragments.RealTimeFeedFragment;
-import com.umeng.commm.ui.fragments.RecommendTopicFragment;
-import com.umeng.commm.ui.fragments.RecommendUserFragment;
+
+import com.umeng.commm.ui.adapters.viewholders.NavigationCommandImpl;
+
+import com.umeng.common.ui.fragments.FavoritesFragment;
+import com.umeng.common.ui.fragments.FriendsFragment;
+import com.umeng.common.ui.fragments.NearbyFeedFragment;
+import com.umeng.common.ui.fragments.RealTimeFeedFragment;
+import com.umeng.common.ui.fragments.RecommendUserFragment;
 import com.umeng.common.ui.activities.AlbumActivity;
 import com.umeng.common.ui.activities.FindBaseActivity;
 import com.umeng.common.ui.fragments.NearByUserFragment;
+import com.umeng.common.ui.fragments.RecommendTopicFragment;
 
 /**
  * 发现的Activity
  */
 public class FindActivity extends FindBaseActivity implements OnClickListener {
-    private RecommendTopicFragment mRecommendTopicFragment;
-    private RecommendUserFragment mRecommendUserFragment;
-    private FriendsFragment mFriendsFragment;
-    private NearbyFeedFragment mNearbyFeedFragment;
-    private FavoritesFragment mFavoritesFragment;
-    private RealTimeFeedFragment mRealTimeFeedFragment;
-    private NearByUserFragment mNearByUserFragment;
-    private MessageCount mUnReadMsg;
 
 
     @Override
     protected void onCreate(Bundle arg0) {
         super.onCreate(arg0);
-
+        command = new NavigationCommandImpl(this);
     }
-
     @Override
     protected void gotoMyFollowActivity() {
         Intent intent = new Intent(FindActivity.this, FollowedTopicActivity.class);
@@ -82,181 +69,21 @@ public class FindActivity extends FindBaseActivity implements OnClickListener {
 
     }
 
-
-    protected void gotoNotificationActivity() {
-        Intent intent = new Intent(FindActivity.this, NotificationActivity.class);
-        intent.putExtra(Constants.USER, mUser);
-        startActivity(intent);
-    }
-
+    @Override
     protected void gotoFeedNewMsgActivity() {
         Intent intent = new Intent(FindActivity.this, NewMsgActivity.class);
         intent.putExtra(Constants.USER, mUser);
         startActivity(intent);
     }
-
-
     /**
-     * 跳转到用户中心Activity
+     * 跳转到用户中心Activity</br>
      */
+    @Override
     protected void gotoUserInfoActivity() {
         Intent intent = new Intent(FindActivity.this, UserInfoActivity.class);
-//        if (mUser == null || TextUtils.isEmpty(mUser.id)) {// 来自开发者外部调用的情况
         intent.putExtra(Constants.TAG_USER, CommConfig.getConfig().loginedUser);
-//        } else {
-//            intent.putExtra(Constants.TAG_USER, mUser);
-//        }
-        // intent.putExtra(Constants.TYPE_CLASS, mContainerClass); //
-        // 设置页面需要此参数，由于个人中心设置被移到此页面，暂时不传递该参数
         startActivity(intent);
     }
 
-    /**
-     * 显示附件推荐Feed
-     */
-    protected void showNearbyFeed() {
-        if (mNearbyFeedFragment == null) {
-            mNearbyFeedFragment = NearbyFeedFragment.newNearbyFeedRecommend();
-            mNearbyFeedFragment.setOnResultListener(new OnResultListener() {
 
-                @Override
-                public void onResult(int status) {
-                    showFindPage();
-                }
-            });
-        }
-        mNearbyFeedFragment.setShowActionbar(true);
-        showCommFragment(mNearbyFeedFragment);
-    }
-
-    /**
-     * 显示实时内容的Fragment
-     */
-    protected void showRealTimeFeed() {
-        if (mRealTimeFeedFragment == null) {
-            mRealTimeFeedFragment = RealTimeFeedFragment.newRealTimeFeedRecommend();
-            mRealTimeFeedFragment.setOnResultListener(new OnResultListener() {
-
-                @Override
-                public void onResult(int status) {
-                    showFindPage();
-                }
-            });
-        }
-        mRealTimeFeedFragment.setShowActionbar(true);
-        showCommFragment(mRealTimeFeedFragment);
-    }
-
-    /**
-     * 显示收藏Feed
-     */
-    protected void showFavoritesFeed() {
-        if (mFavoritesFragment == null) {
-            mFavoritesFragment = FavoritesFragment.newFavoritesFragment();
-            mFavoritesFragment.setOnResultListener(new OnResultListener() {
-
-                @Override
-                public void onResult(int status) {
-                    showFindPage();
-                }
-            });
-        }
-        mFavoritesFragment.setShowActionbar(true);
-        showCommFragment(mFavoritesFragment);
-    }
-
-    /**
-     * 显示推荐话题的Dialog
-     */
-    protected void showRecommendTopic() {
-        if (mRecommendTopicFragment == null) {
-            mRecommendTopicFragment = RecommendTopicFragment.newRecommendTopicFragment();
-            mRecommendTopicFragment.setSaveButtonInVisiable();
-            mRecommendTopicFragment.setOnDismissListener(new OnDismissListener() {
-
-                @Override
-                public void onDismiss(DialogInterface dialog) {
-                    showFindPage();
-                }
-            });
-        }
-        mRecommendTopicFragment.setShowActionbar(true);
-        showCommFragment(mRecommendTopicFragment);
-    }
-
-    /**
-     * 隐藏发现页面，显示fragment
-     *
-     * @param fragment
-     */
-    protected void showCommFragment(Fragment fragment) {
-        findViewById(ResFinder.getId("umeng_comm_find_base")).setVisibility(View.GONE);
-        int container = ResFinder.getId("container");
-        findViewById(container).setVisibility(View.VISIBLE);
-        setFragmentContainerId(container);
-        showFragmentInContainer(container, fragment);
-    }
-
-    /**
-     * 隐藏fragment，显示发现页面
-     */
-    protected void showFindPage() {
-        super.showFindPage();
-        findViewById(ResFinder.getId("umeng_comm_find_base")).setVisibility(
-                View.VISIBLE);
-        findViewById(ResFinder.getId("container")).setVisibility(View.GONE);
-    }
-
-    /**
-     * 显示朋友圈Fragment
-     */
-    protected void showFriendsFragment() {
-        if (mFriendsFragment == null) {
-            mFriendsFragment = FriendsFragment.newFriendsFragment();
-            mFriendsFragment.setOnResultListener(new OnResultListener() {
-
-                @Override
-                public void onResult(int status) {
-                    showFindPage();
-                }
-            });
-        }
-        mFriendsFragment.setShowActionbar(true);
-        showCommFragment(mFriendsFragment);
-    }
-
-    /**
-     * 显示推荐用户fragment
-     */
-    protected void showRecommendUserFragment() {
-        if (mRecommendUserFragment == null) {
-            mRecommendUserFragment = new RecommendUserFragment();
-            mRecommendUserFragment.setSaveButtonInvisiable();
-            mRecommendUserFragment.setOnResultListener(new OnResultListener() {
-
-                @Override
-                public void onResult(int status) {
-                    showFindPage();
-                }
-            });
-        }
-        mRecommendUserFragment.setShowActionbar(true);
-        showCommFragment(mRecommendUserFragment);
-    }
-
-    @Override
-    protected void showNearByUser() {
-        if (mNearByUserFragment == null) {
-            mNearByUserFragment = NearByUserFragment.newNearbyUserFragment();
-            mNearByUserFragment.setTargetClassName(UserInfoActivity.class.getName());
-            mNearByUserFragment.setOnDismissListener(new OnDismissListener() {
-                @Override
-                public void onDismiss(DialogInterface dialog) {
-                    showFindPage();
-                }
-            });
-        }
-        mNearByUserFragment.setShowActionbar(true);
-        showCommFragment(mNearByUserFragment);
-    }
 }

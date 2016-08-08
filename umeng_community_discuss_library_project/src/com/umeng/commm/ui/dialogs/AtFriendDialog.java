@@ -112,7 +112,7 @@ public class AtFriendDialog extends PickerDialog<CommUser> {
     }
 
     /**
-     * 从数据库中加载最近的联系人。
+     * 从数据库中加载最近的联系人。</br>
      * 
      * @param uid
      */
@@ -183,7 +183,7 @@ public class AtFriendDialog extends PickerDialog<CommUser> {
     }
 
     /**
-     * 处理从server加载后返回的数据
+     * 处理从server加载后返回的数据</br>
      * 
      * @param response
      */

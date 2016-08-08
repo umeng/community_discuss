@@ -129,7 +129,7 @@
             android:layout_below="@id/umeng_comm_msg_user_name"
             android:layout_marginLeft="@dimen/umeng_comm_dimen_20px"
             android:layout_marginRight="@dimen/umeng_comm_dimen_20px"
-            android:layout="@layout/umeng_commm_images_gv"
+            android:layout="@layout/umeng_comm_images_gv"
             android:scrollbars="none" />
 
 

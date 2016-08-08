@@ -27,7 +27,8 @@ package com.umeng.commm.ui.activities;
 import android.os.Bundle;
 
 import com.umeng.comm.core.utils.ResFinder;
-import com.umeng.commm.ui.fragments.RelativeUserFragment;
+import com.umeng.commm.ui.adapters.viewholders.NavigationCommandImpl;
+import com.umeng.common.ui.fragments.RelativeUserFragment;
 import com.umeng.common.ui.activities.BaseFragmentActivity;
 
 public class RelativeUserActivity extends BaseFragmentActivity {
@@ -38,6 +39,7 @@ public class RelativeUserActivity extends BaseFragmentActivity {
         setContentView(ResFinder.getLayout("umeng_comm_feeds_activity"));
         int container = ResFinder.getId("umeng_comm_main_container");
         RelativeUserFragment relativeUserFragment = new RelativeUserFragment();
+        relativeUserFragment.setNavigation(new NavigationCommandImpl(this));
         relativeUserFragment.setArguments(getIntent().getExtras());
         setFragmentContainerId(container);
         showFragmentInContainer(container, relativeUserFragment);

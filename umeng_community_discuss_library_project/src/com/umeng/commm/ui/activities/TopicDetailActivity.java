@@ -31,11 +31,17 @@ import com.umeng.comm.core.constants.Constants;
 import com.umeng.comm.core.listeners.Listeners.OnResultListener;
 import com.umeng.comm.core.utils.ResFinder;
 import com.umeng.comm.core.utils.ResFinder.ResType;
-import com.umeng.commm.ui.fragments.HotTopicFeedFragment;
-import com.umeng.commm.ui.fragments.LastestTopicFeedFragment;
-import com.umeng.commm.ui.fragments.RecommendTopicFeedFragment;
-import com.umeng.commm.ui.fragments.TopicFeedFragment;
+import com.umeng.commm.ui.adapters.viewholders.NavigationCommandImpl;
+import com.umeng.common.ui.configure.TopicItem;
+import com.umeng.common.ui.configure.parseJson;
+import com.umeng.common.ui.fragments.BaseFragment;
+import com.umeng.common.ui.fragments.HotTopicFeedFragment;
+import com.umeng.common.ui.fragments.LastestTopicFeedFragment;
+import com.umeng.common.ui.fragments.RecommendTopicFeedFragment;
+import com.umeng.common.ui.fragments.TopicFeedFragment;
 import com.umeng.common.ui.activities.TopicDetailBaseActivity;
+
+import java.util.ArrayList;
 
 /**
  * 话题详情页
@@ -45,18 +51,56 @@ public class TopicDetailActivity extends TopicDetailBaseActivity {
     /**
      * 话题详情的Fragment
      */
-    private TopicFeedFragment mDetailFragment;
-    private LastestTopicFeedFragment lastestTopicFeedFragment;
-    private RecommendTopicFeedFragment recommendTopicFeedFragment;
-    private HotTopicFeedFragment hotTopicFeedFragment;
+//    private TopicFeedFragment mDetailFragment;
+//    private LastestTopicFeedFragment lastestTopicFeedFragment;
+//    private RecommendTopicFeedFragment recommendTopicFeedFragment;
+//    private HotTopicFeedFragment hotTopicFeedFragment;
 
     @Override
     protected void initTitles() {
-        mTitles = getResources().getStringArray(
-                ResFinder.getResourceId(ResType.ARRAY, "umeng_commm_topic_detail_tabs"));
+        if (parseJson.topicItems.size() == 0) {
+            mTitles = getResources().getStringArray(
+                    ResFinder.getResourceId(ResType.ARRAY, "umeng_commm_topic_detail_tabs"));
+
+        }
+        else {
+            mTitles = new String[parseJson.topicItems.size()];
+            for (int i = 0 ;i<mTitles.length;i++){
+                mTitles[i] = parseJson.topicItems.get(i).title;
+            }
+        }
+        command = new NavigationCommandImpl(this);
+        initFragment();
+
     }
 
+    public void initFragment(){
+      if (parseJson.topicItems.size() == 0){
+          TopicFeedFragment mDetailFragment = TopicFeedFragment.newTopicFeedFrmg(mTopic);
+          mDetailFragment.setNavigation(command);
+          mDetailFragment.setOnAnimationListener(mListener);
+          LastestTopicFeedFragment lastestTopicFeedFragment = LastestTopicFeedFragment.newTopicFeedFrmg(mTopic);
+          lastestTopicFeedFragment.setNavigation(command);
+          lastestTopicFeedFragment.setOnAnimationListener(mListener);
+          RecommendTopicFeedFragment recommendTopicFeedFragment = RecommendTopicFeedFragment.newTopicFeedFrmg(mTopic);
+          recommendTopicFeedFragment.setNavigation(command);
+          recommendTopicFeedFragment.setOnAnimationListener(mListener);
+          HotTopicFeedFragment hotTopicFeedFragment = HotTopicFeedFragment.newTopicFeedFrmg(mTopic);
+          hotTopicFeedFragment.setNavigation(command);
+          hotTopicFeedFragment.setOnAnimationListener(mListener);
+          fragments.clear();
+          fragments.add(mDetailFragment);
+          fragments.add(lastestTopicFeedFragment);
+          fragments.add(recommendTopicFeedFragment);
+          fragments.add(hotTopicFeedFragment);
+      }else {
+          fragments.clear();
+            for(TopicItem item:parseJson.topicItems){
+                fragments.add(getFragmentByname(item));
+            }
+      }
 
+    }
 
     @Override
     protected int getLayout() {
@@ -64,7 +108,7 @@ public class TopicDetailActivity extends TopicDetailBaseActivity {
     }
 
     /**
-     * 跳转至发送新鲜事页面
+     * 跳转至发送新鲜事页面</br>
      */
     protected void gotoPostFeedActivity() {
         Intent postIntent = new Intent(TopicDetailActivity.this, PostFeedActivity.class);
@@ -72,36 +116,14 @@ public class TopicDetailActivity extends TopicDetailBaseActivity {
         startActivity(postIntent);
     }
     /**
-     * 获取对应的Fragment。0：话题聚合 1：活跃用户
+     * 获取对应的Fragment。0：话题聚合 1：活跃用户</br>
      * 
      * @param pos
      * @return
      */
     protected Fragment getFragment(int pos) {
-        if (pos == 0) {
-            if (mDetailFragment == null) {
-                mDetailFragment = TopicFeedFragment.newTopicFeedFrmg(mTopic);
-            }
-            mDetailFragment.setOnAnimationListener(mListener);
-            return mDetailFragment;
-        } else if (pos == 1) {
-            if (lastestTopicFeedFragment == null) {
-                lastestTopicFeedFragment = LastestTopicFeedFragment.newTopicFeedFrmg(mTopic);
-            }
-            lastestTopicFeedFragment.setOnAnimationListener(mListener);
-            return lastestTopicFeedFragment;
-        }else if (pos == 2) {
-            if (recommendTopicFeedFragment == null) {
-                recommendTopicFeedFragment = RecommendTopicFeedFragment.newTopicFeedFrmg(mTopic);
-            }
-            recommendTopicFeedFragment.setOnAnimationListener(mListener);
-            return recommendTopicFeedFragment;
-        }else if (pos == 3) {
-            if (hotTopicFeedFragment == null) {
-                hotTopicFeedFragment = HotTopicFeedFragment.newTopicFeedFrmg(mTopic);
-            }
-            hotTopicFeedFragment.setOnAnimationListener(mListener);
-            return hotTopicFeedFragment;
+        if (pos<fragments.size()){
+            return fragments.get(pos);
         }
         return null;
     }

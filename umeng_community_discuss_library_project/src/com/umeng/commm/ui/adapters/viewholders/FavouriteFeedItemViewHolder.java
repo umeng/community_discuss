@@ -106,7 +106,7 @@ public class FavouriteFeedItemViewHolder extends FeedItemViewHolder {
     }
 
     /**
-     * 取消收藏feed
+     * 取消收藏feed</br>
      */
     private void cancelFavoritesFeed() {
         mCommunitySDK.cancelFavoriteFeed(mFeedItem.id,
@@ -140,7 +140,7 @@ public class FavouriteFeedItemViewHolder extends FeedItemViewHolder {
     }
 
     /**
-     * 收藏Feed
+     * 收藏Feed</br>
      */
     private void favoritesFeed() {
         mCommunitySDK.favoriteFeed(mFeedItem.id, new Listeners.SimpleFetchListener<SimpleResponse>() {

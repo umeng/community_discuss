@@ -841,7 +841,7 @@ class FeedDBAPIImpl extends AbsDbAPI<List<FeedItem>> implements FeedDBAPI {
     }
 
     /**
-     * 填充feed的相关数据
+     * 填充feed的相关数据</br>
      *
      * @param items
      */
@@ -859,7 +859,7 @@ class FeedDBAPIImpl extends AbsDbAPI<List<FeedItem>> implements FeedDBAPI {
     }
 
     /**
-     * 填充feed每项数据
+     * 填充feed每项数据</br>
      *
      * @param item
      */

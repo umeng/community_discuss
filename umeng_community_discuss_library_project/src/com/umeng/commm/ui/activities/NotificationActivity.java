@@ -24,25 +24,32 @@
 
 package com.umeng.commm.ui.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
 import com.umeng.comm.core.utils.ResFinder;
+import com.umeng.commm.ui.adapters.viewholders.NavigationCommandImpl;
 import com.umeng.common.ui.activities.BaseFragmentActivity;
+import com.umeng.common.ui.adapters.viewholders.NavigationCommand;
 import com.umeng.common.ui.fragments.NotificationFragment;
 
 /**
  * @author mrsimple
  */
 public class NotificationActivity extends BaseFragmentActivity {
+
+    private NavigationCommand mNavigationCommand;
+
     @Override
     protected void onCreate(Bundle arg0) {
         super.onCreate(arg0);
         setContentView(ResFinder.getLayout("umeng_commm_notify_activity"));
         initTitleLayout();
         attachFragment();
+        mNavigationCommand = new NavigationCommandImpl(this);
     }
 
     private void initTitleLayout() {
@@ -60,7 +67,8 @@ public class NotificationActivity extends BaseFragmentActivity {
 
     private void attachFragment() {
         NotificationFragment fragment = new NotificationFragment();
-        fragment.setUserInfoClassName(UserInfoActivity.class);
+        fragment.setNavigationCommand(mNavigationCommand);
         addFragment(ResFinder.getId("umeng_comm_notify_fragment_layout"), fragment);
     }
+
 }

@@ -63,7 +63,7 @@ public class FeedsActivity extends BaseFragmentActivity implements OnClickListen
     }
 
     /**
-     * 该代码仅仅在“一建生成apk”情况下被调用
+     * 该代码仅仅在“一建生成apk”情况下被调用</br>
      */
     private void addLoginPlatforms() {
         boolean isFromGenerateApk = getApplication().getClass().getSuperclass()
@@ -95,7 +95,7 @@ public class FeedsActivity extends BaseFragmentActivity implements OnClickListen
     }
 
     /**
-     * 处理退出登录后，回到FeedsActivity时的逻辑
+     * 处理退出登录后，回到FeedsActivity时的逻辑</br>
      */
     private void dealLogoutLoginc() {
         Bundle bundle = getIntent().getExtras();

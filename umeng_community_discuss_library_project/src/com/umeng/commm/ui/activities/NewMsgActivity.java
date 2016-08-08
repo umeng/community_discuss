@@ -24,10 +24,12 @@
 
 package com.umeng.commm.ui.activities;
 
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.View;
 
 import com.umeng.comm.core.utils.ResFinder;
+import com.umeng.commm.ui.adapters.viewholders.NavigationCommandImpl;
 import com.umeng.common.ui.activities.NewMsgBaseActivity;
 import com.umeng.common.ui.fragments.CommentTabFragment;
 import com.umeng.common.ui.fragments.LikedMeFragment;
@@ -35,6 +37,13 @@ import com.umeng.common.ui.fragments.MessageSessionFragment;
 import com.umeng.common.ui.fragments.NotificationFragment;
 
 public class NewMsgActivity extends NewMsgBaseActivity {
+
+
+    @Override
+    protected void onCreate(Bundle arg0) {
+        super.onCreate(arg0);
+        mNavigationCommand = new NavigationCommandImpl(this);
+    }
 
     @Override
     public void initParams() {
@@ -73,21 +82,17 @@ public class NewMsgActivity extends NewMsgBaseActivity {
             switch (position) {
                 case 0:
                     f = new CommentTabFragment();
-                    ((CommentTabFragment) f).setUserInfoClassName(UserInfoActivity.class);
-                    ((CommentTabFragment) f).setTopicDetailClassName(TopicDetailActivity.class);
-                    ((CommentTabFragment) f).setFeedDetailClassName(FeedDetailActivity.class);
+                    ((CommentTabFragment) f).setNavigationCommand(mNavigationCommand);
                     break;
 
                 case 1:
                     f = new LikedMeFragment();
-                    ((LikedMeFragment) f).setUserInfoClassName(UserInfoActivity.class);
-                    ((LikedMeFragment) f).setTopicDetailClassName(TopicDetailActivity.class);
-                    ((LikedMeFragment) f).setFeedDetailClassName(FeedDetailActivity.class);
+                    ((LikedMeFragment) f).setNavigationCommand(mNavigationCommand);
                     break;
 
                 case 2:
                     f = new NotificationFragment();
-                    ((NotificationFragment) f).setUserInfoClassName(UserInfoActivity.class);
+                    ((NotificationFragment) f).setNavigationCommand(mNavigationCommand);
                     break;
 
                 case 3:

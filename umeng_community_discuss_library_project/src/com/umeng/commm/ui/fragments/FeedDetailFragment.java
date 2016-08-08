@@ -68,7 +68,7 @@ import java.util.List;
  * 该页面会展示该条Feed的Like用户以及评论。
  */
 public class FeedDetailFragment extends CommentEditFragment<List<FeedItem>, FeedDetailPresenter>
-        implements MvpCommentView, MvpLikeView, MvpFeedDetailView, FeedCommentAdapter.OnReplyCommentClickListener {
+        implements MvpFeedDetailView, FeedCommentAdapter.OnReplyCommentClickListener {
 
 
     private FeedDetailHeaderViewHolder mFeedViewHolder;
@@ -100,8 +100,6 @@ public class FeedDetailFragment extends CommentEditFragment<List<FeedItem>, Feed
      * 评论ListView Adapter
      */
     FeedCommentAdapter mCommentAdapter;
-
-    private LoginReceiver mLoginReceiver;
     /**
      * 是否弹出评论编辑键盘
      */
@@ -132,8 +130,8 @@ public class FeedDetailFragment extends CommentEditFragment<List<FeedItem>, Feed
     @Override
     protected FeedDetailPresenter createPresenters() {
         super.createPresenters();
-        FeedDetailPresenter presenter = new FeedDetailPresenter(this, this, this, mFeedItem);
-        presenter.setLoadLikeDataIsEnable(false);
+        FeedDetailPresenter presenter = new FeedDetailPresenter(this, mFeedItem);
+        presenter.setPresenterStyle(FeedDetailPresenter.FEED_DETAIL_PRESENTER_STYLE.DISCUSS);
         return presenter;
     }
 
@@ -151,12 +149,12 @@ public class FeedDetailFragment extends CommentEditFragment<List<FeedItem>, Feed
                 if (mSeeHeader.isSelected()) {
                     mPresenter.loadCommentsFromServer();
                     mSeeHeader.setSelected(false);
-                    ((TextView)mSeeHeader).setText(ResFinder.getString("umeng_comm_only_see_header"));
+                    ((TextView) mSeeHeader).setText(ResFinder.getString("umeng_comm_only_see_header"));
 
                 } else {
                     mPresenter.loadCommentsByuserFromServer();
                     mSeeHeader.setSelected(true);
-                    ((TextView)mSeeHeader).setText(ResFinder.getString("umeng_comm_only_see_all"));
+                    ((TextView) mSeeHeader).setText(ResFinder.getString("umeng_comm_only_see_all"));
                 }
             }
         });
@@ -168,11 +166,6 @@ public class FeedDetailFragment extends CommentEditFragment<List<FeedItem>, Feed
                         showCommentLayout();
                     }
                 });
-
-
-        BroadcastUtils.registerFeedBroadcast(getActivity(), mReceiver);
-        mLoginReceiver = new LoginReceiver();
-        getActivity().registerReceiver(mLoginReceiver, new IntentFilter(Constants.ACTION_LOGIN_SUCCESS));
     }
 
     @Override
@@ -343,7 +336,7 @@ public class FeedDetailFragment extends CommentEditFragment<List<FeedItem>, Feed
 //                if (item.creator.id.equals(CommConfig.getConfig().loginedUser.id)) {
 //                    ToastMsg.showShortMsgByResName("umeng_comm_do_not_reply_yourself");
 //                } else {
-                    showCommentLayout(position, item);
+                showCommentLayout(position, item);
 //                }
             }
         }
@@ -384,7 +377,7 @@ public class FeedDetailFragment extends CommentEditFragment<List<FeedItem>, Feed
         mCommentEditText.setHint("");
         mActionsLayout.setVisibility(View.GONE);
         View titleView = getActivity().findViewById(ResFinder.getId("umeng_comm_feed_title_layout"));
-        if(titleView != null){
+        if (titleView != null) {
             titleView.setVisibility(View.GONE);
         }
     }
@@ -394,7 +387,7 @@ public class FeedDetailFragment extends CommentEditFragment<List<FeedItem>, Feed
         super.hideCommentLayout();
         mActionsLayout.setVisibility(View.VISIBLE);
         View titleView = getActivity().findViewById(ResFinder.getId("umeng_comm_feed_title_layout"));
-        if(titleView != null){
+        if (titleView != null) {
             titleView.setVisibility(View.VISIBLE);
         }
     }
@@ -416,13 +409,13 @@ public class FeedDetailFragment extends CommentEditFragment<List<FeedItem>, Feed
     }
 
     private void setCommentCount(int count) {
-        count  = count < 0 ? 0 : count;
+        count = count < 0 ? 0 : count;
         mFeedItem.commentCount = count;
         mCommentCountTextView.setText(String.valueOf(CommonUtils.getLimitedCount(count)));
     }
 
     private void setLikeCount(int count) {
-        count  = count < 0 ? 0 : count;
+        count = count < 0 ? 0 : count;
         mFeedItem.likeCount = count;
         mLikeTextView.setText(String.valueOf(CommonUtils.getLimitedCount(count)));
     }
@@ -436,7 +429,7 @@ public class FeedDetailFragment extends CommentEditFragment<List<FeedItem>, Feed
     }
 
     /**
-     * 获取显示在EditText中显示的评论文本。不如：回复XXX
+     * 获取显示在EditText中显示的评论文本。不如：回复XXX</br>
      *
      * @return hint
      */
@@ -483,24 +476,24 @@ public class FeedDetailFragment extends CommentEditFragment<List<FeedItem>, Feed
 
     }
 
-    public void appendComments(List<Comment> comments){
+    public void appendComments(List<Comment> comments) {
         List<Comment> mRepeatComment = new ArrayList<Comment>();
-        for (int i = 0; i < mSentComments.size(); i ++){
+        for (int i = 0; i < mSentComments.size(); i++) {
             Comment tempComment = mSentComments.get(i);
-            if(comments.contains(tempComment)){
+            if (comments.contains(tempComment)) {
                 mRepeatComment.add(tempComment);
             }
         }
         // 下一页的数据中不含有已发送的评论，直接移除后拼接
-        if(mRepeatComment.isEmpty()){
-            for (int i = 0; i < mSentComments.size(); i++){
+        if (mRepeatComment.isEmpty()) {
+            for (int i = 0; i < mSentComments.size(); i++) {
                 Comment tempComment = mSentComments.get(i);
                 mCommentAdapter.getDataSource().remove(tempComment);
                 mFeedItem.comments.remove(tempComment);
             }
-        }else{
+        } else {
             // 下一页数据中含义已发送的评论，去除重复数据后拼接
-            for (int i = 0; i < mRepeatComment.size(); i++){
+            for (int i = 0; i < mRepeatComment.size(); i++) {
                 Comment tempComment = mRepeatComment.get(i);
                 mCommentAdapter.getDataSource().remove(tempComment);
                 mFeedItem.comments.remove(tempComment);
@@ -550,46 +543,16 @@ public class FeedDetailFragment extends CommentEditFragment<List<FeedItem>, Feed
         BroadcastUtils.sendFeedUpdateBroadcast(getActivity(), mFeedItem);
     }
 
+    /**
+     * 论坛版没有转发
+     */
     @Override
-    public void onDestroy() {
-        BroadcastUtils.unRegisterBroadcast(getActivity(), mReceiver);
-        getActivity().unregisterReceiver(mLoginReceiver);
-        super.onDestroy();
-    }
-
-    private BroadcastUtils.DefalutReceiver mReceiver = new BroadcastUtils.DefalutReceiver() {
-        public void onReceiveFeed(Intent intent) {
-            FeedItem feedItem = getFeed(intent);
-            if (feedItem == null) {
-                return;
-            }
-            BroadcastUtils.BROADCAST_TYPE type = getType(intent);
-            if (BroadcastUtils.BROADCAST_TYPE.TYPE_FEED_POST == type) {
-                updateForwardCount(feedItem, 1);
-            } else if (BroadcastUtils.BROADCAST_TYPE.TYPE_FEED_DELETE == type) {
-                updateForwardCount(feedItem, -1);
-            }
-        }
-    };
-
-    private void updateForwardCount(FeedItem item, int count) {
-        if (TextUtils.isEmpty(item.sourceFeedId)) {
-            return;
-        }
+    public void updateForwardCount(int count) {
         mFeedItem.forwardCount = mFeedItem.forwardCount + count;
     }
 
     @Override
     public void onRefreshStart() {
-    }
-
-    private class LoginReceiver extends BaseBroadcastReceiver {
-        @Override
-        protected void onReceiveIntent(Context context, Intent intent) {
-            if (Constants.ACTION_LOGIN_SUCCESS.equals(intent.getAction())) {
-                mPresenter.loadCommentsFromServer();
-            }
-        }
     }
 
     @Override
@@ -600,10 +563,10 @@ public class FeedDetailFragment extends CommentEditFragment<List<FeedItem>, Feed
     @Override
     public void showAllComment(boolean result) {
         mSeeHeader.setEnabled(true);
-        if(!mIsInitCommentList){
-            if(result){
+        if (!mIsInitCommentList) {
+            if (result) {
                 mSeeHeader.setSelected(false);
-            }else{
+            } else {
                 mSeeHeader.setSelected(true);
             }
         }
@@ -613,9 +576,9 @@ public class FeedDetailFragment extends CommentEditFragment<List<FeedItem>, Feed
     @Override
     public void showOwnerComment(boolean result) {
         mSeeHeader.setEnabled(true);
-        if(result){
+        if (result) {
             mSeeHeader.setSelected(true);
-        }else{
+        } else {
             mSeeHeader.setSelected(false);
         }
     }
